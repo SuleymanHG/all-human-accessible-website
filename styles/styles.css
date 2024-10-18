@@ -1,0 +1,160 @@
+* {
+	box-sizing:border-box;	
+}
+
+html {
+	height:100dvh;	
+}
+
+body {
+	min-height:100%;
+	margin:0;
+	padding:10vw 1vw 1vw 1vw;
+	
+	background-color:#ffffff;
+	
+	display:grid;
+}
+
+main {
+	position:relative;
+	overflow:auto;
+	scroll-snap-type:both mandatory;
+	overscroll-behavior:contain;
+}
+
+
+ul {	
+	margin:0;
+	padding:1em;
+	list-style:none;
+	position:absolute;
+	width:700em;
+
+	background-color:#fff;
+
+	columns:47;
+}
+
+li {
+	--aspect-ratio:1;
+
+	list-style:none;
+	
+	margin-bottom:1em;
+	aspect-ratio:var(--aspect-ratio);
+	overflow:hidden;
+	scroll-snap-align:center;	
+	object-fit: cover;
+	background-position:center;
+	
+}
+img{
+	object-fit: cover;
+}
+
+
+li:not(.hier-starten) {
+	
+	@starting-style {
+		scroll-snap-align:none;
+	}
+	transition-property:scroll-snap-align;
+	transition-delay:.5s;
+	transition-behavior: allow-discrete;
+	
+}
+
+
+li.hier-starten {
+	display:grid;
+	place-content:center;
+	place-items:center;
+	
+	border-radius:2em;
+}
+
+li.hier-starten div {
+	background-color:yellow;
+	
+	padding:.5em 1em;
+	
+	text-align:center;
+	font-weight:bold;
+}
+
+
+li:nth-of-type(2n) {
+	--aspect-ratio:1.3;
+}
+
+li:nth-of-type(3n) {
+	--aspect-ratio:1.6;
+}
+
+li:nth-of-type(5n) {
+	--aspect-ratio:1.9;
+}
+
+li:nth-of-type(7n) {
+	--aspect-ratio:.8;
+}
+
+li:nth-of-type(9n) {
+	--aspect-ratio:1.7;
+}
+
+
+
+
+/* plaatjes */
+li:nth-of-type(19n + 6 ) { background-image: url(/assets/1._Ramata-Toulaye_Sy_Banel__Adama.d9264bcf.fill-1024x768.jpg); }
+li:nth-of-type(19n + 7 ) { background-image: url(/assets/2024-manzar-NCA_-_Auditorium.2e16d0ba.fill-1024x768.jpg); }
+li:nth-of-type(19n + 8 ) { background-image: url(/assets/2_ntuhdCF.2e16d0ba.fill-1024x768.jpg); }
+li:nth-of-type(19n + 9 ) { background-image: url(/assets/3C3A0992.2e16d0ba.fill-1024x768.jpg); }
+li:nth-of-type(19n + 10 ) { background-image: url(/assets/Aphrodisias_Aydin_1958-_1962_2.2e16d0ba.fill-1024x768.jpg); }
+li:nth-of-type(19n + 11) { background-image: url(/assets/Art_is_about_art.2e16d0ba.fill-1024x768.png); }
+li:nth-of-type(19n + 12) { background-image: url(/assets/Chaumet_Tiara_Dream_AS_2022_Day_2.2e16d0ba.fill-1024x768.jpg); }
+li:nth-of-type(19n + 13) { background-image: url(/assets/Ellsworth-Kelly-Painting-for-a-Wh.2e16d0ba.fill-1024x768.jpg); }
+li:nth-of-type(19n + 14) { background-image: url(/assets/lusail-museum-OM-706_005.2e16d0ba.fill-1024x768.jpg); }
+li:nth-of-type(19n + 15) { background-image: url(/assets/malawal.2e16d0ba.fill-1024x768.jpg); }
+li:nth-of-type(19n + 16) { background-image: url(/assets/MIA-Ektashif-Moroco.613b3b0b.fill-1024x768.png); }
+li:nth-of-type(19n + 17) { background-image: url(/assets/mughal-florals-mia.2e16d0ba.fill-1024x768.jpg); }
+li:nth-of-type(19n + 18) { background-image: url(/assets/Nada_Elkharashi_Alfagaa_Oasis5.2e16d0ba.fill-1024x768.jpg); }
+li:nth-of-type(19n + 19) { background-image: url(/assets/Necklace-mia-spelndours-exh-_LR.4f1418cc.fill-1024x768.jpg); }
+li:nth-of-type(19n + 20) { background-image: url(/assets/OLEKSANDRAUMANSKAABDULLAALSALLAT.2e16d0ba.fill-1024x768.png); }
+li:nth-of-type(19n + 21) { background-image: url(/assets/qam-render-visual_-material-1.2e16d0ba.fill-1024x768.jpg); }
+li:nth-of-type(19n + 22) { background-image: url(/assets/Tantura_19_-_FA_Mass_Grave_Testim.2e16d0ba.fill-1024x768.png); }
+li:nth-of-type(19n + 23) { background-image: url(/assets/zwara_digital_baanner1.2e16d0ba.fill-1024x768.jpg); }
+li:nth-of-type(19n + 24) { background-image: url(/assets/Aphrodisias_Aydin_1958-_1962_2.2e16d0ba.fill-1024x768.jpg); } 
+
+.website_navbar{
+	all:initial;
+    display:flex;
+    align-items: center;
+	position:fixed;
+	top: 0;
+	z-index:1;
+	background-color: #fff;
+    
+}
+
+
+.navbar_list {
+	all:initial;
+    display: flex;
+    flex-direction:row;
+    list-style-type: none;
+
+    margin: 0;
+    padding: 0;
+    gap: 2em;
+    
+  }
+
+  @media only screen and (max-width: 600px) {
+	svg {
+	  width:150px;
+	}
+  }
+  
