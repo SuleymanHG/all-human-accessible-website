@@ -14,7 +14,7 @@ body {
 	view-transition-name: cards;
 	display: grid;
 	gap: 1em;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(5, 1fr);
 	+ .grid {
 		margin-top: 1em;
 	}
